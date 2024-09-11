@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
                     // Intent to start MainActivity2
                     Intent intent = new Intent(Login.this, MainActivity2.class);
                     startActivity(intent);
-                    finish(); // Optional: Close Login activity
+                   finish(); // Optional: Close Login activity
                 } else {
                     Toast.makeText(Login.this, "Login Failed - Username or Password is incorrect", Toast.LENGTH_LONG).show();
                 }

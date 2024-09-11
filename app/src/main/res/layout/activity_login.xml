@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/home_background"
+    android:background="@drawable/login_background"
     tools:context=".Login">
 
 <androidx.cardview.widget.CardView
@@ -101,7 +101,7 @@
         android:elevation="0dp"
         android:text="New User? Sign Up Now"
         android:fontFamily="@font/protesto"
-        android:textColor="@color/purple"/>
+        android:textColor="@color/white"/>
 
 
 
