@@ -13,6 +13,7 @@ public class Login extends AppCompatActivity {
     EditText username;
     EditText password;
     Button loginbutton;
+    Button singup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class Login extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         loginbutton = findViewById(R.id.loginbutton);
+        singup=findViewById(R.id.signup);
 
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,10 +36,17 @@ public class Login extends AppCompatActivity {
                     // Intent to start MainActivity2
                     Intent intent = new Intent(Login.this, MainActivity2.class);
                     startActivity(intent);
-                    finish(); // Optional: Close Login activity
+                   finish(); // Optional: Close Login activity
                 } else {
-                    Toast.makeText(Login.this, "Login Failed - Username or Password is incorrect", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Login.this, "Login Failed - Username or Password is incorrect", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        singup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(Login.this, SignUpPage.class);
+                startActivity(intent2);
             }
         });
     }
